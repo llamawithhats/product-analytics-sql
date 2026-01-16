@@ -20,18 +20,42 @@ The dataset consists of five relational tables representing customer accounts, s
 ## 💼 Business Context
 SaaS businesses rely on recurring revenue, long-term user engagement, and low churn to remain sustainable.
 
-Understanding
-1. When users activate
-2. Why they retain
-3. What leads to churn 
-
-is critical for product strategy and revenue growth.
+Understanding when users activate, why they retain, and what leads to churn is critical for product strategy and revenue growth.
 
 This analysis aims to approach RavenStack as if it were a real company seeking to:
 - Improve trial-to-paid conversion
 - Increase long-term retention
 - Reduce preventable churn
 
+## 🔍 Key Findings & Insights
+
+## 💡 Recommendations
+
+## 💭 My Approach
+The analysis follows a *structured workflow*:
+1. Data validation and sanity checks
+2. Exploratory SQL queries (counts, distributions, timelines)
+3. Cohort-based retention analysis
+4. Feature usage comparisons between active and churned users
+5. Revenue and subscription lifecycle analysis
+
+Each section builds on insights from the previous step.
+
+## ⚠️ Limitations & Future Work
+
+While the dataset simulates real-world SaaS behavior, it has limitations:
+
+- **Partial Insight:** Synthetic data may not capture all real user behaviors
+
+- **Short Time Range:** Limited time horizon for long-term retention analysis
+
+- **Data Gaps:** Not all users have complete data due to optional data entries, which could skew metrics
+
+Future work could include:
+
+- **Predictive churn modeling:** Predict and identify customers that are likely to churn to enable proactive retention strategies before they leave
+
+- **Dashboarding with Business Intelligence (BI) tools:** Create interactive visual displays that aggregate and present key metrics in real-time
 
 
 ## 🔧 Tools & Technologies
@@ -43,7 +67,7 @@ This analysis aims to approach RavenStack as if it were a real company seeking t
 ## 🙌 Acknowledgment
 - Dataset by [River @ Rivalytics](https://www.kaggle.com/rivalytics)
 - Licensed under [MIT](https://www.mit.edu/~amini/LICENSE.md)
-- With reference to [this GitHub repo by @rahmasayed](https://github.com/rahmasayed18/saas-product-analytics) 
+- With reference to [this GitHub repo by @rahmasayed18](https://github.com/rahmasayed18/saas-product-analytics) 
 
 
 
