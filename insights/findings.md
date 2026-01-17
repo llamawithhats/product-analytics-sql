@@ -1,91 +1,65 @@
 # SaaS Product Analysis &mdash; Findings
-## Signups
 
-### Signups Over Time (Monthly Basis)
+## Exploratory Analysis
+### Signups
+#### Signups Over Time (Monthly Basis)
 ![monthly signups over time](../images/signups_year_month.png)
-There was a general upward trend in signups over the months between 2023 & 2024, with: 
-- multiple peaks at 2023-05, 2023-09, 2023-11, 2024-03
-- largest peak of 32 signups at the end of the final year (2024-11).
-- very steep drop of 15 signups in the final month
+There was a general upward trend in signups over the months of 2023 & 2024, with: 
+- Notable signup peaks were observed in May, September, and November 2023, as well as March 2024
+- Peak of 32 signups in November 2024, followed by a sharp 15-signup decline in December
 
-Note: Possible marketing campaigns or promotions during peak periods. 
+### Subscriptions
 
-## Subscriptions
-
-### Plan Tiers and Revenue
-| Plan Tier | Monthly Revenue | Annual Revenue | Count |
+#### Plan Tiers and Revenue
+| Plan Tier | Monthly Revenue* | Annual Revenue* | Count |
 |-----------|-------------|-----------|-----|
 | Basic	| 760,437 | 9,125,244 | 1602 |
 | Pro  | 	2,105,089 | 25,261,068 | 1675 |
 | Enterprise | 8,473,221 | 101,678,652 | 1723 |
 
-- **Enterprise Plan** had the most subscriptions, and acts as the main source of revenue
-- 9.72% of total subscriptions was ended from 2023-2024
+**Revenue figures represent aggregated totals across all subscriptions in each plan tier*
 
-## Feature Usage
+- **Enterprise Plan** accounts for the majority of total subscription revenue, contributing disproportionately more revenue relative to its subscription count
+- Approximately 9.72% of recorded subscriptions have ended within the observed time window (2023-2024)
 
-<table style="width:100%; border-collapse:collapse;">
-  <tr>
-    <td style="vertical-align:top; width:50%;">
+### Feature Usage
+*💡 Feature IDs are anonymized in the dataset*
+- Every user used one or more features 
+- Feature 32 and Feature 12 were the most used features with 659 uses
+- Feature 4 and Feature 26 recorded the highest error counts, suggesting potential usability or reliability issues
+- Activation lag* is ~5.2 days 
 
-| feature_name | error_count | count |
-|--------------|-------------|-------|
-| feature_1    | 336         | 629   |
-| feature_2    | 401         | 642   |
-| feature_3    | 345         | 598   |
-| feature_4    | 418         | 625   |
-| feature_5    | 316         | 577   |
-| feature_6    | 339         | 655   |
-| feature_7    | 311         | 619   |
-| feature_8    | 284         | 596   |
-| feature_9    | 404         | 624   |
-| feature_10   | 348         | 634   |
-| feature_11   | 352         | 643   |
-| feature_12   | 359         | 659   |
-| feature_13   | 372         | 612   |
-| feature_14   | 307         | 600   |
-| feature_15   | 349         | 640   |
-| feature_16   | 396         | 622   |
-| feature_17   | 369         | 651   |
-| feature_18   | 369         | 588   |
-| feature_19   | 352         | 589   |
+**Activation lag is defined as the average number of days between account creation and first recorded feature usage*
 
-    </td>
-    <td style="vertical-align:top; width:50%;">
+### Support & Churn Signals
 
-| feature_name | error_count | count |
-|--------------|-------------|-------|
-| feature_20   | 308         | 643   |
-| feature_21   | 349         | 591   |
-| feature_22   | 343         | 636   |
-| feature_23   | 306         | 563   |
-| feature_24   | 349         | 643   |
-| feature_25   | 344         | 615   |
-| feature_26   | 417         | 649   |
-| feature_27   | 362         | 611   |
-| feature_28   | 361         | 623   |
-| feature_29   | 371         | 640   |
-| feature_30   | 362         | 629   |
-| feature_31   | 335         | 644   |
-| feature_32   | 357         | 659   |
-| feature_33   | 336         | 635   |
-| feature_34   | 397         | 650   |
-| feature_35   | 313         | 587   |
-| feature_36   | 371         | 648   |
-| feature_37   | 306         | 636   |
-| feature_38   | 356         | 643   |
-| feature_39   | 357         | 631   |
-| feature_40   | 380         | 621   |
+#### Support Ticket Findings
+| Average Satisfaction | Response Time | Resolution Time |
+|:---:|:---:|:---:|
+| **3.98/5** ⭐ | **1-180 min** | **1-72 hrs** |
 
-    </td>
-  </tr>
-</table>
+While average satisfaction is relatively high, response and resolution times vary significantly, indicating inconsistent support experience
 
-- Features were used by all users
-- Feature 32 & 12 were the most used features with 659 uses
-- Feature 4 & 26 has the highest error counts of 418 & 417 respectively
-- Activation lag is ~5.2 days 
+#### Churn Events Over Time (Monthly Basis)
+![monthly churn events over time](../images/churn_events.png)
+There was a gradual increase in monthly churn events from 2023 to 2024 with a significant spike in the last month.\
+Notable increases appeared in June 2024 and sustained through October 2024, followed by a brief stagnation before the major December spike.
 
-
-## Reasons for Churn
+#### Reasons for Churn
+General:
 ![churn reason](../images/churn_reason_bar_chart.png)
+
+- 'Features' is the most frequently cited churn reason followed by 'Support' and 'Budget'
+
+Significant spike month (Dec 2024):
+- 'Budget' is the most frequently cited churn reason followed by 'Features' and 'Support'
+
+### Summary
+Overall, the exploratory analysis suggests that while user acquisition and revenue grew steadily, churn increased toward the end of the observed period. Feature-related issues consistently appear as a leading churn driver, with budget concerns becoming more prominent during peak churn months. These findings motivate deeper cohort-based retention and feature adoption analysis in subsequent sections.
+
+-----------------------------------
+
+
+
+
+
