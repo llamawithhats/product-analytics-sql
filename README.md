@@ -45,6 +45,8 @@ Each section builds on insights from the previous step.
 
 While the dataset simulates real-world SaaS behavior, it has limitations:
 
+- **Data Errors:** Misalignment in data such as earliest feature usage happening before earliest sign up suggests possible data errors
+
 - **Partial Insight:** Synthetic data may not capture all real user behaviors
 
 - **Short Time Range:** Limited time horizon for long-term retention analysis
@@ -57,7 +59,6 @@ Future work could include:
 
 - **Dashboarding with Business Intelligence (BI) tools:** Create interactive visual displays that aggregate and present key metrics in real-time
 
-
 ## 🔧 Tools & Technologies
 - SQL (PostgreSQL)
 - pgAdmin 4
@@ -65,7 +66,7 @@ Future work could include:
 - Data Cleaning & Transformation (SQL Views, CTEs)
 
 ## 🙌 Acknowledgment
-- Dataset by [River @ Rivalytics](https://www.kaggle.com/rivalytics)
+- Dataset by [River @ Rivalytics](https://www.kaggle.com/datasets/rivalytics/saas-subscription-and-churn-analytics-dataset?resource=download)
 - Licensed under [MIT](https://www.mit.edu/~amini/LICENSE.md)
 - With reference to [this GitHub repo by @rahmasayed18](https://github.com/rahmasayed18/saas-product-analytics) 
 

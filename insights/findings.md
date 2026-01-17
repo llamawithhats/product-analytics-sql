@@ -38,7 +38,7 @@ There was a general upward trend in signups over the months of 2023 & 2024, with
 |:---:|:---:|:---:|
 | **3.98/5** ⭐ | **1-180 min** | **1-72 hrs** |
 
-While average satisfaction is relatively high, response and resolution times vary significantly, indicating inconsistent support experience
+While average satisfaction is relatively high, response and resolution times vary significantly, indicating inconsistent support experience.
 
 #### Churn Events Over Time (Monthly Basis)
 ![monthly churn events over time](../images/churn_events.png)
