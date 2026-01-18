@@ -59,7 +59,58 @@ Overall, the exploratory analysis suggests that while user acquisition and reven
 
 -----------------------------------
 
+## Retention Analysis
 
+To monitor retention, retention cohorts was based on active subscription days, with checkpoints at Day 14, Day 30, and Day 90 to capture early behavior patterns.
 
+### Cohort Retention Trends Over Time
 
+![cohort retention](../images/cohort_retention_over_time.png)
 
+Retention patterns remain broadly consistent across cohorts, with strong early retention (Day 14 and Day 30) observed throughout the dataset. Day 90 retention varies slightly by cohort but generally stabilizes at a lower baseline.
+
+Sharp declines observed in the most recent cohorts are primarily due to *limited observation windows*, as newer subscriptions have not yet reached later lifecycle checkpoints. As a result, these drops should not be interpreted as true increases in churn. 
+
+### Average Retention by Lifecycle Checkpoint
+![avg retention checkpoint](../images/avg_retention_by_checkpoint.png)
+
+Average retention remains high in the early lifecycle, with ~97% of subscriptions active at Day 14 and ~94% at Day 30. However, retention drops more sharply by Day 90, falling to ~85%.
+
+This indicates that while initial activation is effective, a significant portion of users disengage after the first month. The **Day 30–90** window represents the most critical opportunity for improving long-term retention.
+
+### Summary
+These findings suggest that while the product successfully retains users in the early lifecycle, sustained value delivery beyond the first month is the primary driver of long-term retention and warrants deeper behavioral analysis.
+
+----------------------------
+
+## Feature Adoption & Retention
+
+To understand behavioral differences between retained and early-churned users, feature usage during the first 14 days of subscription was analyzed. Subscriptions were grouped into:
+- **Retained:** Active for 90 days or more
+- **Early Churn:** Churned within the first 30 days
+
+### Early Feature Breadth
+Retained subscriptions used slightly more distinct features during the first 14 days compared to early-churned subscriptions.
+
+![avg feat used](../images/avg_feat_used_per_retention_group.png)
+
+- **Retained (≥90 days):** 1.07 features on average  
+- **Early Churn (<30 days):** 1.04 features on average  
+
+While the difference is modest, it suggests that retained users tend to explore the product marginally more during early onboarding.
+
+However, the small magnitude of the difference indicates that feature breadth alone is not a strong predictor of retention, and that deeper engagement or feature quality may matter more than the number of features touched.
+
+### Early Usage Errors
+
+Early-churned subscriptions experienced fewer errors on average during the first 14 days compared to retained subscriptions.
+
+![avg erros](../images/avg_errors_per_retention_group.png)
+
+- **Retained (≥90 days):** ~0.57 errors on average  
+- **Early Churn (<30 days):** ~0.37 errors on average  
+
+This counterintuitive result likely reflects **higher overall engagement** among retained users. Users who interact more deeply with the product are exposed to more complex workflows, increasing the likelihood of encountering errors, while early-churned users may disengage before reaching these scenarios.
+
+### Summary
+Overall, early feature breadth shows only a weak correlation with long-term retention, while error counts appear to be more closely tied to engagement depth rather than product friction alone.
