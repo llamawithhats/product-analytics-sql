@@ -49,4 +49,10 @@ SELECT
 FROM subscription_retention
 GROUP BY cohort_month
 ORDER BY cohort_month; -- aggregate retention rates by cohort month
+
+SELECT 'Day 14' AS checkpoint, AVG(day_14_retention) AS avg_retention FROM cohort_retention
+UNION ALL
+SELECT 'Day 30', AVG(day_30_retention) FROM cohort_retention
+UNION ALL
+SELECT 'Day 90', AVG(day_90_retention) FROM cohort_retention; -- average retention rates across each checkpoint
 	
