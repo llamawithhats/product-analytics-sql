@@ -57,6 +57,8 @@ Significant spike month (Dec 2024):
 ### Summary
 Overall, the exploratory analysis suggests that while user acquisition and revenue grew steadily, churn increased toward the end of the observed period. Feature-related issues consistently appear as a leading churn driver, with budget concerns becoming more prominent during peak churn months. These findings motivate deeper cohort-based retention and feature adoption analysis in subsequent sections.
 
+These exploratory patterns motivate deeper analysis into when users disengage and how early behavior relates to long-term retention, which is examined in the following sections.
+
 -----------------------------------
 
 ## Retention Analysis
@@ -69,7 +71,7 @@ To monitor retention, retention cohorts was based on active subscription days, w
 
 Retention patterns remain broadly consistent across cohorts, with strong early retention (Day 14 and Day 30) observed throughout the dataset. Day 90 retention varies slightly by cohort but generally stabilizes at a lower baseline.
 
-Sharp declines observed in the most recent cohorts are primarily due to *limited observation windows*, as newer subscriptions have not yet reached later lifecycle checkpoints. As a result, these drops should not be interpreted as true increases in churn. 
+Apparent drops in later checkpoints for recent cohorts are driven by *limited observation windows* rather than true churn, as newer subscriptions have not yet reached later lifecycle stages.
 
 ### Average Retention by Lifecycle Checkpoint
 ![avg retention checkpoint](../images/avg_retention_by_checkpoint.png)
@@ -99,7 +101,7 @@ Retained subscriptions used slightly more distinct features during the first 14 
 
 While the difference is modest, it suggests that retained users tend to explore the product marginally more during early onboarding.
 
-However, the small magnitude of the difference indicates that feature breadth alone is not a strong predictor of retention, and that deeper engagement or feature quality may matter more than the number of features touched.
+However, the small magnitude of the difference indicates that feature breadth alone is **insufficient** to explain retention outcomes. 
 
 ### Early Usage Errors
 
@@ -114,3 +116,41 @@ This counterintuitive result likely reflects **higher overall engagement** among
 
 ### Summary
 Overall, early feature breadth shows only a weak correlation with long-term retention, while error counts appear to be more closely tied to engagement depth rather than product friction alone.
+
+--------------------------------------
+## Churn Analysis
+### Churn Timing Analysis
+Churn timing is measured at the **account** level, calculated from each account’s first subscription start date to its last churn date. This approach reflects the full customer lifecycle rather than individual subscription cycles.
+
+![churn stage n accounts churned](../images/churn_stage_vs_accounts_churned.png)
+
+While a meaningful number of accounts churn within the first 90 days, the largest share of churned accounts occurs after 180+ days, indicating that long-time customers also contribute substantially to overall churn volume.
+
+The distribution indicates that churn is not limited to early onboarding failure.  Instead, it highlights the importance of **ongoing value delivery and expectation management**, not just early activation.
+
+### Support Experience — Retained vs Churned Users
+
+| Churn Status | Total Support Tickets | Average First Response Time (min) | Escalation Rate | Average Satisfaction Score |
+|------------|---------------|-----------------------------|-----------------|------------------------|
+| Retained         | 605           | 88.17                       | 3.97            | 3.98                   |
+| Churned        | 1330          | 88.65                       | 5.26            | 3.98                   |
+
+Churned accounts generated **more than twice** the number of support tickets, nearly identical average first response times and higher escalation rate compared to retained accounts.
+
+Average satisfaction scores are approximately identical between retained and churned accounts, suggesting satisfaction scores alone may not fully capture underlying user frustration and hence reason for churn.
+
+### Plan Activity Prior to Churn
+
+To assess whether subscription instability precedes churn, recent upgrade and downgrade activity within 90 days prior to churn was examined for churned accounts.
+
+| Plan Activity | Churned Accounts (%) |
+| ------------- | -------------------- |
+| Upgrade Plan | 20.50 |
+| Downgrade Plan | 8.83 |
+
+Across all churn events, about 20.50% of churned accounts had upgraded their plan shortly before leaving, while 8.83% had downgraded. 
+
+The higher prevalence of upgrades relative to downgrades suggests that churn does not solely reflect cost-cutting behavior. Instead, a notable share of users appear to increase their commitment prior to churn, potentially indicating **expectation–value mismatches** after higher-tier adoption, where upgraded capabilities do not translate into perceived business value.
+
+### Summary
+Overall, these findings suggest that churn prevention should focus on ongoing value delivery, expectation management, and proactive support throughout the customer lifecycle, rather than solely on early activation.
