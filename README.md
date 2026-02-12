@@ -91,7 +91,7 @@ Future work could include:
 
 - **Dashboarding with Business Intelligence (BI) tools:** Create interactive visual displays that aggregate and present key metrics in real-time
 
-## 🔧 Tools & Technologies
+## Tools & Technologies
 - SQL (PostgreSQL)
 - pgAdmin 4
 - Git & GitHub
