@@ -93,6 +93,7 @@ Future work could include:
 
 ## Tools & Technologies
 - SQL (PostgreSQL)
+- Python (scripting)
 - pgAdmin 4
 - Git & GitHub
 - Data Cleaning & Transformation (SQL Views, CTEs)
